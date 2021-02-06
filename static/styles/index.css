@@ -35,7 +35,7 @@
 	text-align: center;
 }
 
-.search-box{
+#search-box{
 	width: 70%;
 }
 
@@ -53,4 +53,12 @@
 	text-transform: capitalize;
 	padding-top: 2%;
 	padding-bottom: 1%;
+}
+
+.fa-rotate-270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
