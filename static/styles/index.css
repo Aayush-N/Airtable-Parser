@@ -26,8 +26,31 @@
 	color: #FFF;
 	text-align: center;
 	text-transform: uppercase;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 .search-div{
+	padding-top: 2%;
 	text-align: center;
+}
+
+.search-box{
+	width: 70%;
+}
+
+.popular-text{
+	padding-top: 3%;
+	padding-bottom: 3%;
+	color: #00000038;
+	font-size: 14px;
+}
+
+.faq-div{
+	background-color: #dd601d;
+	color: #FFF;
+	text-align: center;
+	text-transform: capitalize;
+	padding-top: 2%;
+	padding-bottom: 1%;
 }

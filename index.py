@@ -1,4 +1,4 @@
-from flask import Flask, Response, render_template
+from flask import Flask, jsonify, render_template
 from airtable import Airtable
 import json
 
@@ -19,4 +19,14 @@ def api():
 		song = i['fields']
 		song.update(artist_data['fields'])
 		
-	return Response(json.dumps(all_songs), mimetype='application/json')
+	return jsonify(all_songs)
+
+@app.route('/search/<language>')
+def search(language):
+	language_songs = songs.search('Language', language.title())
+	for i in language_songs:
+		artist_data = artists.get(i['fields']['Artist'][0])
+		song = i['fields']
+		song.update(artist_data['fields'])
+		
+	return jsonify(language_songs)
