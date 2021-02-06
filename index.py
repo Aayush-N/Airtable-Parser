@@ -1,4 +1,4 @@
-from flask import Flask, Response
+from flask import Flask, Response, render_template
 from airtable import Airtable
 import json
 
@@ -9,6 +9,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+	return render_template('index.html')
+
+@app.route('/api')
+def api():
 	all_songs = songs.get_all()
 	for i in all_songs:
 		artist_data = artists.get(i['fields']['Artist'][0])
