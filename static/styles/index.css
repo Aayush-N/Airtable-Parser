@@ -125,19 +125,9 @@ button:focus {
 
 
 /*Card section start*/
-.card-middle-col{
-	padding-left: 10px !important;
-	margin: 0 !important;
-}
-@media only screen and (min-width: 768px) {
-	.card-left-col{
-		padding-right: 0 !important;
-		margin: 0 !important;
-	}
-	.card-middle-col{
-		padding-left: 0 !important;
-		margin: 0 !important;
-	}
+
+@media only screen and (max-width: 768px) {
+	
 }
 .song-name{
 	display:inline;
@@ -170,12 +160,17 @@ button:focus {
 }
 .language{
 	display:inline;
-	font-size: 15px;
+	font-size: 14px;
 	float: right;
 	font-weight: 600;
 }
+
+.country{
+	color: red;
+}
 .single-card{
-	padding: 8px;
+	padding-bottom: 8px;
+	padding-top: 10px;
 	border-bottom: 1px solid #808080;
 }
 @media only screen and (min-width: 768px) {

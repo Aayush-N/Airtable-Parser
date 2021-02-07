@@ -41,3 +41,6 @@ def search(language):
 		song = i['fields']
 		song.update(artist_data['fields'])
 	return jsonify(language_songs)
+
+if __name__ == '__main__':
+    app.run(host="localhost", port=5000)

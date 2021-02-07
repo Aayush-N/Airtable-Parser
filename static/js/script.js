@@ -105,7 +105,7 @@ var load_songs = function(url) {
                 }
 
                 //Creation of one single card
-                var card = '<div class="container-fluid single-card"> <div class="row"> <div class="col-3 card-left-col"> <img src="' + picture + '" style="height: 77px; width: 77px;"> </div> <div class="col-9 card-middle-col"> <span class="inline-span"><p class="song-name">' + song_name + '</p><p class="star"><img src="/static/img/star.svg" height="20px"></p></span><br> <p class="genre" style="color:' + genre_color+'">' + genre + '</p><br> <p class="album">' + song_name + ' (' + country + ')</p><br> <span class="inline-span"><b><p class="year">' + year + '</p></b><p class="instrument" style="color:' + instrument_color+'">' + instrument + '</p><p class="language">' + language_to_symbol(language) + '</p></span> </div> </div> </div>'
+                var card = '<div class="container-fluid single-card"> <div class="row justify-items-start"> <div class="col-3 card-left-col"> <img src="' + picture + '" style="height: 77px; width: 77px;"> </div> <div class="col-9 card-middle-col"> <span class="inline-span"><p class="song-name">' + song_name + '</p><p class="star"><img src="/static/img/star.svg" height="20px"></p></span><br> <p class="genre" style="color:' + genre_color+'">' + genre + '</p><br> <p class="album">' + song_name + ' <span class="country">(' + country + ')</span></p><br> <span class="inline-span"><b><p class="year">' + year + '</p></b><p class="instrument" style="color:' + instrument_color+'">' + instrument + '</p><p class="language">' + language_to_symbol(language) + '</p></span> </div> </div> </div>'
                 //Append each card to the div containing the cards
                 $("#cards").append(card);
             });
