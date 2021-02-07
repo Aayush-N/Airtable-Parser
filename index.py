@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template, request
 from airtable import Airtable
+import unidecode
 
 songs = Airtable('appEghI8Wsg5QqBbJ', 'SONGS', 'keyWAcmBPlf0uxqyg')
 artists = Airtable('appEghI8Wsg5QqBbJ', 'ARTISTS', 'keyWAcmBPlf0uxqyg')
@@ -33,7 +34,8 @@ def language_api():
 
 @app.route('/search/<language>')
 def search(language):
-	language_songs = songs.search('Language', language.title())
+	unaccented_language = unidecode.unidecode(language)
+	language_songs = songs.search('Language', unaccented_language.title())
 	for i in language_songs:
 		artist_data = artists.get(i['fields']['Artist'][0])
 		song = i['fields']

@@ -1,13 +1,22 @@
-#nav-text{
-	color: #FFF !important;
-}
-.navbar {
-	padding-top: 0;
-	padding-bottom: 2px;
+/*General page CSS start*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   	padding-top: 70px;
+   	line-height: 1.25;
+   	font-family: 'Open Sans', sans-serif;
 }
 
-#nav-brand-img{
-	margin-bottom: -5px;
+p{
+	margin-bottom: 0;
+}
+.spacer {
+    flex: 1;
+}
+.inline-span{
+	display:inline;
 }
 
 #inlinespaced{
@@ -22,15 +31,42 @@
 #inline > * + * {
 	margin-left: 10px;
 }
+/*General page CSS end*/
 
+/*navbar section start*/
+#nav-text{
+	color: #FFF !important;
+}
+.navbar {
+	padding-top: 0;
+	padding-bottom: 2px;
+}
+
+#nav-brand-img{
+	margin-bottom: -5px;
+}
+/*navbar section end*/
+
+/*Search box start*/
+.search-div {
+	padding-top: 2%;
+	text-align: center;
+}
+.search-div.h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
 .wrapper {
     border:1px solid #000;
     display:inline-block;
-    width: 80%;
+    width: 85%;
 }
+
 #search-box{
-	width: 85%;
+	width: 88%;
+	font-size: 20px; 
 }
+
 @media only screen and (min-width: 768px) {
 	.wrapper{
 		width: 40%;
@@ -39,18 +75,20 @@
 		width: 85%;
 	}
 }
+
 input,
 button {
     background-color:transparent;
     border:0;
 }
+
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
 }
-
+/*Search box end*/
 
 .language-div{
 	background-color: #89c951;
@@ -60,17 +98,6 @@ button:focus {
 	padding-top: 2%;
 	padding-bottom: 1%;
 }
-
-.search-div{
-	padding-top: 2%;
-	text-align: center;
-}
-
-.search-div.h1{
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
-}
-
 
 .popular-text{
 	padding-top: 3%;
@@ -92,28 +119,25 @@ button:focus {
 	background-color: #465828;
 	color: #FFF;
 	text-align: center;
-	padding-top: 3%;
+	padding-top: 4%;
 	padding-bottom: 1%;
 }
 
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-   	padding-top: 70px;
-   	line-height: 1.25;
-   	font-family: 'Open Sans', sans-serif;
-}
 
-p{
-	margin-bottom: 0;
+/*Card section start*/
+.card-middle-col{
+	padding-left: 10px !important;
+	margin: 0 !important;
 }
-.spacer {
-    flex: 1;
-}
-.inline-span{
-	display:inline;
+@media only screen and (min-width: 768px) {
+	.card-left-col{
+		padding-right: 0 !important;
+		margin: 0 !important;
+	}
+	.card-middle-col{
+		padding-left: 0 !important;
+		margin: 0 !important;
+	}
 }
 .song-name{
 	display:inline;
@@ -158,3 +182,5 @@ p{
 	.single-card{
 		width: 50%;
 }
+
+/*Card section end*/
