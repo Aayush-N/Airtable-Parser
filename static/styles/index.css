@@ -1,10 +1,9 @@
 #nav-text{
 	color: #FFF !important;
 }
-
 .navbar {
 	padding-top: 0;
-	padding-bottom: 0;
+	padding-bottom: 2px;
 }
 
 #nav-brand-img{
@@ -24,11 +23,34 @@
 	margin-left: 10px;
 }
 
-.card-img-top {
-    width: 77px;
-    height: 77px;
-    object-fit: fill;
+.wrapper {
+    border:1px solid #000;
+    display:inline-block;
+    width: 80%;
 }
+#search-box{
+	width: 85%;
+}
+@media only screen and (min-width: 768px) {
+	.wrapper{
+		width: 40%;
+	}
+	#search-box{
+		width: 85%;
+	}
+}
+input,
+button {
+    background-color:transparent;
+    border:0;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 
 .language-div{
 	background-color: #89c951;
@@ -36,17 +58,19 @@
 	text-align: center;
 	text-transform: uppercase;
 	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-bottom: 1%;
 }
 
 .search-div{
-	padding-top: 4%;
+	padding-top: 2%;
 	text-align: center;
 }
 
-#search-box{
-	width: 70%;
+.search-div.h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 }
+
 
 .popular-text{
 	padding-top: 3%;
@@ -60,15 +84,15 @@
 	color: #FFF;
 	text-align: center;
 	text-transform: capitalize;
-	padding-top: 2%;
-	padding-bottom: 1%;
+	padding-top: 3%;
+	padding-bottom: 0.5%;
 }
 
 .last-div{
 	background-color: #465828;
 	color: #FFF;
 	text-align: center;
-	padding-top: 2%;
+	padding-top: 3%;
 	padding-bottom: 1%;
 }
 
@@ -128,5 +152,9 @@ p{
 }
 .single-card{
 	padding: 8px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #808080;
+}
+@media only screen and (min-width: 768px) {
+	.single-card{
+		width: 50%;
 }

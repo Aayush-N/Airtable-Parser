@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/jquery.auto-complete.css') }}" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Hello</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -43,10 +43,11 @@
     <div class="container-fluid search-div">
         <h1>SEARCH LANGUAGE</h1>
         <form onsubmit="return false;" autocomplete="off">
-            <div class="autocomplete">
+            <div class="autocomplete wrapper">
                 <input type="text" id="search-box" name="searchbox" placeholder="Enter Language" name="search" />
+                <button onclick="validate()"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
-                <input type="submit" onclick="validate()" />
+               <!--  <input type="submit" onclick="validate()" /> -->
         </form>
         <h3 class="popular-text">POPULAR</h3>
     </div>

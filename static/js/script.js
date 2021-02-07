@@ -63,7 +63,7 @@ var load_songs = function(url) {
                 }
                 if (this.fields.Genre) {
                     genre = this.fields.Genre;
-                    genre_color_dict = {'Pop': 'blue', 'Rock': 'red', 'Ballad': 'grey', 'Heavy Metal': 'pink', 'Rock Latino': 'yellow'};
+                    genre_color_dict = {'Pop': '#00008B', 'Rock': '#8B0000', 'Ballad': '#2F4F4F', 'Heavy Metal': '#4B0082', 'Rock Latino': '#FFD700'};
                     genre_color = genre_color_dict[genre]
                 }
                 if (this.fields.Artist) {
@@ -74,7 +74,7 @@ var load_songs = function(url) {
                 }
                 if (this.fields.Instrument) {
                     instrument = this.fields.Instrument;
-                    instrument_color_dict = {'Guitar': 'red', 'Piano': 'blue'};
+                    instrument_color_dict = {'Guitar': '#A52A2A', 'Piano': '#DC143C'};
                     instrument_color = instrument_color_dict[instrument];
                 }
                 if (this.fields.Language) {
@@ -92,7 +92,7 @@ var load_songs = function(url) {
 
                 //Creation of one single card
                 //var card = '<div class="card" style="width: 100%"><div class="row no-gutters"><div class="col-sm-4"> <img class="card-img card-img-top" src="' + picture + '" alt="' + song_name + '_img"></div><div class="col-sm-8"><div class="card-body"><div id="inlinespaced"><h5 class="card-title">' + song_name + '</h5><span><img src="/static/img/star.svg" height="20px"></span></div><p class="card-text">' + genre + '</p><div id="inline"><p class="card-text">' + song_name + ' (' + country + ')</p></div><div id="inlinespaced"><div id="inline"><p class="card-text">1993</p><p class="card-text" style="text-align: left">' + instrument + '</p></div><p class="card-text">' + language_to_symbol(language) + '</p></div></div></div></div></div>';
-                var card = '<div class="container-fluid single-card"> <div class="row"> <div class="col-3 card-left-col"> <img src="' + picture + '" style="height: 77px; width: 77px;"> </div> <div class="col-9 card-middle-col"> <span class="inline-span"><p class="song-name">' + song_name + '</p><p class="star"><img src="/static/img/star.svg" height="20px"></p></span><br> <p class="genre" style="color:' + genre_color+'">' + genre + '</p><br> <p class="album">' + song_name + ' (' + country + ')</p><br> <span class="inline-span"><p class="year">' + year + '</p><p class="instrument" style="color:' + instrument_color+'">' + instrument + '</p><p class="language">' + language_to_symbol(language) + '</p></span> </div> </div> </div>'
+                var card = '<div class="container-fluid single-card"> <div class="row"> <div class="col-3 card-left-col"> <img src="' + picture + '" style="height: 77px; width: 77px;"> </div> <div class="col-9 card-middle-col"> <span class="inline-span"><p class="song-name">' + song_name + '</p><p class="star"><img src="/static/img/star.svg" height="20px"></p></span><br> <p class="genre" style="color:' + genre_color+'">' + genre + '</p><br> <p class="album">' + song_name + ' (' + country + ')</p><br> <span class="inline-span"><b><p class="year">' + year + '</p></b><p class="instrument" style="color:' + instrument_color+'">' + instrument + '</p><p class="language">' + language_to_symbol(language) + '</p></span> </div> </div> </div>'
                 //Append each card to the div containing the cards
                 $("#cards").append(card);
             });
