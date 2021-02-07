@@ -20,7 +20,7 @@
     <nav class="navbar navbar-light navbar-expand" style="background-color: #465828;">
         <div class="container-fluid">
             <ul class="navbar-nav mr-auto">
-                <span class="navbar-brand fa fa-play fa-rotate-270" style="color:white;"></span>
+                <img src="/static/img/circle.svg" height="20px">
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -40,23 +40,25 @@
     </nav>
     <div class="container-fluid search-div">
         <h1>SEARCH LANGUAGE</h1>
-        <form action="/search/" autocomplete="off" method="POST">
+        <form onsubmit="return false;" autocomplete="off">
             <div class="autocomplete">
-                <input type="text" id="search-box" name="searchbox" placeholder="Enter Language" name="search">
+                <input type="text" id="search-box" name="searchbox" placeholder="Enter Language" name="search" />
             </div>
-                <input type="submit">
+                <input type="submit" onclick="validate()" />
         </form>
         <h3 class="popular-text">POPULAR</h3>
     </div>
     <div class="container-fluid language-div">
-        <h5>Language: Spanish </h5>
+        <span class="language-span">Language:</span>
+        <span class="language-span" id="language-name">All</span>
     </div>
     <div class="container-fluid" id="cards">
         <div class="skeleton skeleton-circle-multi-line" id="loading-skeleton" style="--c-s: 80px;
     --c-pos: top;–shine: rgba(255,255,255, 0.8);
     --lines: 5; --c-w: 100%; –t:1s ;display: none;"></div>
     </div>
-    <div class="footer fixed-bottom faq-div">
+    <div class="spacer"></div>
+    <div class="footer faq-div">
         <h5>Frequent Questions</h5>
     </div>
 
@@ -67,79 +69,19 @@
     <script src="{{url_for('static', filename='js/jquery.auto-complete.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
     <script type="text/javascript">
-    var load_songs = function(url) {
-            $.ajax({
-                url: url,
-                context: document.body,
-                beforeSend: function() {
-                    $("#loading-skeleton").show();
-                },
-                success: function(data) {
-                    $.each(data, function() {
-                        if (this.fields.Song) {
-                            var song_name = this.fields.Song
-                        } else {
-
-                            var song_name = 'undefined';
-                        }
-                        if (this.fields.Genre) {
-                            var genre = this.fields.Genre
-                        } else {
-
-                            var genre = 'undefined';
-                        }
-                        if (this.fields.Artist) {
-                            var artist = this.fields.Artist
-                        } else {
-
-                            var artist = 'undefined';
-                        }
-                        if (this.fields.Year) {
-                            var year = this.fields.Year
-                        } else {
-
-                            var year = 'undefined';
-                        }
-                        if (this.fields.Instrument) {
-                            var instrument = this.fields.Instrument
-                        } else {
-
-                            var instrument = '';
-                        }
-                        if (this.fields.Language) {
-                            var language = this.fields.Language
-                        } else {
-
-                            var language = 'undefined';
-                        }
-                        if (typeof this.fields.Picture != 'undefined') {
-                            var picture = this.fields.Picture[0].url
-                        } else {
-
-                            var picture = 'https://via.placeholder.com/200';
-                        }
-                        if (this.fields.Style) {
-                            var style = this.fields.Style
-                        } else {
-
-                            var style = 'undefined';
-                        }
-                        if (this.fields.Country) {
-                            var country = this.fields.Country
-                        } else {
-
-                            var country = 'undefined';
-                        }
-                        var card = '<div class="card" style="width: 100%"><div class="row no-gutters"><div class="col-sm-4"> <img class="card-img card-img-top" src="' + picture + '" alt="' + song_name + '_img"></div><div class="col-sm-8"><div class="card-body"><div id="inlinespaced"><h5 class="card-title">' + song_name + '</h5><span class="fa fa-star checked"></span></div><p class="card-text">' + genre + '</p><div id="inline"><p class="card-text">' + song_name + ' (' + country + ')</p></div><div id="inlinespaced"><div id="inline"><p class="card-text">1993</p><p class="card-text" style="text-align: left">' + instrument + '</p></div><p class="card-text">' + country + '</p></div></div></div></div></div>';
-                        $("#cards").append(card);
-                    });
-                    $("#loading-skeleton").hide();
-                }
-            });
-        };
+    
     $(document).ready(function() {
+        // This method is run to load all the cards initially
         load_songs("/api");
     });
+
+    //This method is run when the user submits the language search box
+    validate = function(){
+        var language = document.getElementById("search-box").value;
+         $('#cards').find('*').not('.skeleton').remove();
+        load_songs("/search/" + language);
+        $('#language-name').html(language);
+    }
     </script>
 </body>
 

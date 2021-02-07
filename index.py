@@ -31,15 +31,11 @@ def language_api():
 	languages = list(set(language_list))
 	return jsonify(languages)
 
-@app.route('/search', methods=['GET','POST'])
-def search():
-	if request.method == 'POST':
-		language = request.form['searchbox']
-		language_songs = songs.search('Language', language.title())
-		for i in language_songs:
-			artist_data = artists.get(i['fields']['Artist'][0])
-			song = i['fields']
-			song.update(artist_data['fields'])
-		return jsonify(language_songs)
-	else:
-		return 'hello'
+@app.route('/search/<language>')
+def search(language):
+	language_songs = songs.search('Language', language.title())
+	for i in language_songs:
+		artist_data = artists.get(i['fields']['Artist'][0])
+		song = i['fields']
+		song.update(artist_data['fields'])
+	return jsonify(language_songs)
