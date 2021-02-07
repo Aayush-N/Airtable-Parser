@@ -1,8 +1,15 @@
 ## Steps to install this flask project on Windows:
 
+### Step 0
+
+Clone this repository on your PC in a directory that you want. To do this make sure you have git installed on your PC and then through command prompt, reach the directory where you want your project to be. Now run the following command to clone the repository to your PC:
+
+`git clone https://github.com/Aayush-N/Airtable-Parser.git`
+
+---
 ### Step 1
 
-Open command prompt and run the following commad:
+To test if you have python installed on your PC, run the following command:
 
 `python -V`
 
@@ -11,14 +18,16 @@ If you have python installed you will see an output that says the version of the
 ---
 ### Step 2
 
-Run the command `pip -V`
+To test whether you have pip installed, run the command `pip -V`
 
 If you see an output with a version number, that means you have pip installed as well
 
 ---
 ### Step 3
 
-In command prompt make sure you are in the folder where you have the project code with the "index.py" file present in it.
+Now in command prompt make sure you are in the folder where you have the project code with the "index.py" file present in it. To enter into the project folder, type `cd Airtable-Parser-master`. This will put you inside the project folder. 
+
+To check type `dir` and if you see "index.py" in the output, then you are successfully inside the project folder 
 
 Run the following command to start a new virtual env:
 
