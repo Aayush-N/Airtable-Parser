@@ -13,14 +13,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css-skeletons.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/jquery.auto-complete.css') }}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Hello</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand" style="background-color: #465828;">
+    <nav class="navbar navbar-light navbar-expand fixed-top" style="background-color: #465828;">
         <div class="container-fluid">
             <ul class="navbar-nav mr-auto">
-                <img src="/static/img/circle.svg" height="20px">
+                <img src="/static/img/circle.svg" height="20px" id="nav-brand-img">
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -49,18 +51,22 @@
         <h3 class="popular-text">POPULAR</h3>
     </div>
     <div class="container-fluid language-div">
-        <span class="language-span">Language:</span>
-        <span class="language-span" id="language-name">All</span>
+        <span class="inline-span">Language:</span>
+        <span class="inline-span" id="language-name">All</span>
     </div>
     <div class="container-fluid" id="cards">
         <div class="skeleton skeleton-circle-multi-line" id="loading-skeleton" style="--c-s: 80px;
     --c-pos: top;–shine: rgba(255,255,255, 0.8);
     --lines: 5; --c-w: 100%; –t:1s ;display: none;"></div>
     </div>
+    
     <div class="spacer"></div>
-    <div class="footer faq-div">
-        <h5>Frequent Questions</h5>
+    <div class="footer">
+        <div class="faq-div"><h5>Frequent Questions</h5></div>
+        <div class="last-div"><img src="/static/img/rectangle.svg" height="40px"></div>
+        
     </div>
+
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
