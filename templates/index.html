@@ -22,7 +22,11 @@
     <nav class="navbar navbar-light navbar-expand fixed-top" style="background-color: #465828;">
         <div class="container-fluid">
             <ul class="navbar-nav mr-auto">
+<<<<<<< HEAD
                 <img src="/static/img/circle.svg" height="25px" id="nav-brand-img">
+=======
+                <img src="{{ url_for('static', filename='img/circle.svg') }}" height="20px" id="nav-brand-img">
+>>>>>>> 4c886d2b6f42d0f087739e5d02de8fdac7653cba
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -64,6 +68,7 @@
     <div class="spacer"></div>
     <br>
     <div class="footer">
+
         <div class="faq-div"><h5 class="faq-text">Frequent Questions</h5></div>
         <div class="last-div"><img src="/static/img/rectangle.svg" id="footer-img" height="40px"></div>
         
@@ -77,17 +82,17 @@
     <script src="{{url_for('static', filename='js/jquery.auto-complete.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
     <script type="text/javascript">
-    
+
     $(document).ready(function() {
         // This method is run to load all the cards initially
-        load_songs("/api");
+        load_songs(window.location.href + "/api/");
     });
 
     //This method is run when the user submits the language search box
     validate = function(){
         var language = document.getElementById("search-box").value;
          $('#cards').find('*').not('.skeleton').remove();
-        load_songs("/search/" + language);
+        load_songs(window.location.href + "/search/" + language);
         $('#language-name').html(language);
     }
     </script>

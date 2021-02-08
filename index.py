@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, render_template, request
 from airtable import Airtable
 import unidecode
@@ -5,7 +6,9 @@ import unidecode
 songs = Airtable('appEghI8Wsg5QqBbJ', 'SONGS', 'keyWAcmBPlf0uxqyg')
 artists = Airtable('appEghI8Wsg5QqBbJ', 'ARTISTS', 'keyWAcmBPlf0uxqyg')
 
-app = Flask(__name__)
+project_root = os.path.dirname(os.path.realpath('__file__'))
+static_path = os.path.join(project_root, 'static')
+app = Flask(__name__, static_folder=static_path)
 app.url_map.strict_slashes = False
 
 @app.route('/')
