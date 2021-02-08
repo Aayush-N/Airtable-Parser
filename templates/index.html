@@ -22,11 +22,11 @@
     <nav class="navbar navbar-light navbar-expand fixed-top" style="background-color: #465828;">
         <div class="container-fluid">
             <ul class="navbar-nav mr-auto">
-                <img src="/static/img/circle.svg" height="20px" id="nav-brand-img">
+                <img src="/static/img/circle.svg" height="25px" id="nav-brand-img">
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-text">Popular</a>
+                    <a class="nav-link" id="nav-text"><span class="nav-popular">Popular</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="nav-text">C</a>
@@ -41,7 +41,7 @@
         </div>
     </nav>
     <div class="container-fluid search-div">
-        <h1>SEARCH LANGUAGE</h1>
+        <h1 class="search-h1">SEARCH LANGUAGE</h1>
         <form onsubmit="return false;" autocomplete="off">
             <div class="autocomplete wrapper">
                 <input type="text" id="search-box" name="searchbox" placeholder="Enter Language" name="search" />
@@ -52,8 +52,8 @@
         <h3 class="popular-text">POPULAR</h3>
     </div>
     <div class="container-fluid language-div">
-        <span class="inline-span">Language:</span>
-        <span class="inline-span" id="language-name">All</span>
+        <span class="inline-span language-strip">Language:</span>
+        <span class="inline-span language-choice" id="language-name">All</span>
     </div>
     <div class="container-fluid" id="cards">
         <div class="skeleton skeleton-circle-multi-line" id="loading-skeleton" style="--c-s: 80px;
@@ -64,7 +64,7 @@
     <div class="spacer"></div>
     <br>
     <div class="footer">
-        <div class="faq-div"><h5>Frequent Questions</h5></div>
+        <div class="faq-div"><h5 class="faq-text">Frequent Questions</h5></div>
         <div class="last-div"><img src="/static/img/rectangle.svg" id="footer-img" height="40px"></div>
         
     </div>

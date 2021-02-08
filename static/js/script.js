@@ -101,7 +101,7 @@ var load_songs = function(url) {
                     style = this.fields.Style;
                 }
                 if (this.fields.Country) {
-                    country = this.fields.Country;
+                    country = this.fields.Country.substring(0,3);
                 }
 
                 //Creation of one single card
