@@ -22,11 +22,7 @@
     <nav class="navbar navbar-light navbar-expand fixed-top" style="background-color: #465828;">
         <div class="container-fluid">
             <ul class="navbar-nav mr-auto">
-<<<<<<< HEAD
-                <img src="/static/img/circle.svg" height="25px" id="nav-brand-img">
-=======
-                <img src="{{ url_for('static', filename='img/circle.svg') }}" height="20px" id="nav-brand-img">
->>>>>>> 4c886d2b6f42d0f087739e5d02de8fdac7653cba
+                <img src="{{ url_for('static', filename='img/circle.svg') }}" height="25px" id="nav-brand-img">
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -85,7 +81,7 @@
 
     $(document).ready(function() {
         // This method is run to load all the cards initially
-        load_songs(window.location.href + "/api/");
+        //load_songs(window.location.href + "/api/");
     });
 
     //This method is run when the user submits the language search box

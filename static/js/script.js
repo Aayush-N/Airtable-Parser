@@ -5,8 +5,6 @@ This file contains all the requierd Javascript functions, it is a mix of Jquery 
 
 //This method adds autocomplete functionality to the language search box
 $(function() {
-    console.log(script_root)
-
     //Gets a list of languages availabale in the database
     var languages = JSON.parse($.ajax({ url: window.location.href + '/languages', async: false }).responseText);
 

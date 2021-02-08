@@ -200,6 +200,7 @@ button:focus {
 
 .country{
 	color: red;
+	text-transform: uppercase;
 }
 .single-card{
 	padding-bottom: 8px;
@@ -208,7 +209,46 @@ button:focus {
 }
 @media only screen and (min-width: 500px) {
 	.single-card{
-		width: 70%;
+		width: 80%;
+	}
+	.single-card .col-3{
+		width: 20%;
+	}
+	.single-card .col-9{
+		width: 80%;
+	}
 }
-
+@media only screen and (min-width: 700px) {
+	.single-card{
+		width: 70%;
+	}
+	.single-card .col-3{
+		width: 17%;
+	}
+	.single-card .col-9{
+		width: 83%;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.single-card{
+		width: 60%;
+	}
+	.single-card .col-3{
+		width: 12%;
+	}
+	.single-card .col-9{
+		width: 88%;
+	}
+}
+@media only screen and (min-width: 1600px) {
+	.single-card{
+		width: 50%;
+	}
+	.single-card .col-3{
+		width: 12%;
+	}
+	.single-card .col-9{
+		width: 88%;
+	}
+}
 /*Card section end*/
