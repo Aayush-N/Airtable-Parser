@@ -8,7 +8,7 @@ $(function() {
     console.log(script_root)
 
     //Gets a list of languages availabale in the database
-    var languages = JSON.parse($.ajax({ url: script_root + '/languages', async: false }).responseText);
+    var languages = JSON.parse($.ajax({ url: window.location.href + '/languages', async: false }).responseText);
 
     //Adds autocomplete suggestions to the search box
     $('input[name="searchbox"]').autoComplete({

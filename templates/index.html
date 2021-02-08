@@ -77,19 +77,17 @@
     <script src="{{url_for('static', filename='js/jquery.auto-complete.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
     <script type="text/javascript">
-    
-    var script_root = {{ request.script_root|tojson|safe }};
 
     $(document).ready(function() {
         // This method is run to load all the cards initially
-        load_songs(script_root + "/api/");
+        load_songs(window.location.href + "/api/");
     });
 
     //This method is run when the user submits the language search box
     validate = function(){
         var language = document.getElementById("search-box").value;
          $('#cards').find('*').not('.skeleton').remove();
-        load_songs(script_root + "/search/" + language);
+        load_songs(window.location.href + "/search/" + language);
         $('#language-name').html(language);
     }
     </script>
