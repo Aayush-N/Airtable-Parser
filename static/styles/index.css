@@ -150,16 +150,15 @@ button:focus {
 	color: #FFF;
 	text-align: center;
 	height: 80px;
-	padding-top: 6%;
-	padding-bottom: 0%;
+	padding-top: 2%;
+}
+
+.footer-img{
+	height: 40px !important;
 }
 
 
 /*Card section start*/
-
-@media only screen and (max-width: 768px) {
-	
-}
 .song-name{
 	display:inline;
 	font-size: 17px;
