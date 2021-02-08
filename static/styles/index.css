@@ -218,19 +218,61 @@ button:focus {
 	padding-left: 20px;
 	padding-right: 0px;
 }
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
+	.single-card .col-9{
+		width: 76%;
+	}
+}
+@media only screen and (min-width: 425px) {
+	.single-card .col-9{
+		width: 78%;
+	}
+}
+@media only screen and (min-width: 450px) {
+	.single-card .col-9{
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 520px) {
+	.single-card {
+		width: 90%;
+	}
+	.single-card .col-9{
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 585px) {
 	.single-card{
 		width: 80%;
 	}
 	.single-card .col-9{
-		width: 82%;
+		width: 81%;
 	}
 }
-
+@media only screen and (min-width: 730px) {
+	.single-card{
+		width: 76%;
+	}
+	.single-card .col-9{
+		width: 85%;
+	}
+}
 @media only screen and (min-width: 800px) {
+	.single-card{
+		width: 72%;
+	}
+	.single-card .col-9{
+		width: 85%;
+	}
+}
+@media only screen and (min-width: 900px) {
 	.single-card .col-9{
 		width: 87%;
+	}
+}
+@media only screen and (min-width: 960px) {
+	.single-card .col-9{
+		width: 88%;
 	}
 }
 @media only screen and (min-width: 1224px) {
