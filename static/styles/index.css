@@ -206,49 +206,37 @@ button:focus {
 	padding-bottom: 8px;
 	padding-top: 10px;
 	border-bottom: 1px solid #DADADA;
+	display: table;
+	width: 100%;
 }
-@media only screen and (min-width: 500px) {
+
+.card-left-col{
+	display: table-cell;
+	width: 80px;
+}
+.card-middle-col{
+	display: table-cell;
+	padding-left: 20px;
+	padding-right: 0px;
+}
+
+@media only screen and (min-width: 600px) {
 	.single-card{
 		width: 80%;
 	}
-	.single-card .col-3{
-		width: 20%;
-	}
 	.single-card .col-9{
-		width: 80%;
+		width: 82%;
 	}
 }
-@media only screen and (min-width: 700px) {
-	.single-card{
-		width: 70%;
-	}
-	.single-card .col-3{
-		width: 17%;
-	}
+
+@media only screen and (min-width: 800px) {
 	.single-card .col-9{
-		width: 83%;
+		width: 87%;
 	}
 }
-@media only screen and (min-width: 1024px) {
-	.single-card{
-		width: 60%;
-	}
-	.single-card .col-3{
-		width: 12%;
-	}
+@media only screen and (min-width: 1224px) {
 	.single-card .col-9{
-		width: 88%;
-	}
-}
-@media only screen and (min-width: 1600px) {
-	.single-card{
-		width: 50%;
-	}
-	.single-card .col-3{
-		width: 12%;
-	}
-	.single-card .col-9{
-		width: 88%;
+		width: 90%;
 	}
 }
 /*Card section end*/
