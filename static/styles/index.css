@@ -218,66 +218,22 @@ button:focus {
 	padding-left: 20px;
 	padding-right: 0px;
 }
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 345px) {
 	.single-card .col-9{
-		width: 76%;
+		width: 71%;
 	}
 }
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 400px) {
 	.single-card .col-9{
 		width: 78%;
 	}
 }
-@media only screen and (min-width: 450px) {
-	.single-card .col-9{
-		width: 80%;
-	}
-}
-@media only screen and (min-width: 520px) {
+@media only screen and (min-width: 470px) {
 	.single-card {
-		width: 90%;
+		width: 450px;
 	}
 	.single-card .col-9{
 		width: 80%;
-	}
-}
-@media only screen and (min-width: 585px) {
-	.single-card{
-		width: 80%;
-	}
-	.single-card .col-9{
-		width: 81%;
-	}
-}
-@media only screen and (min-width: 730px) {
-	.single-card{
-		width: 76%;
-	}
-	.single-card .col-9{
-		width: 85%;
-	}
-}
-@media only screen and (min-width: 800px) {
-	.single-card{
-		width: 72%;
-	}
-	.single-card .col-9{
-		width: 85%;
-	}
-}
-@media only screen and (min-width: 900px) {
-	.single-card .col-9{
-		width: 87%;
-	}
-}
-@media only screen and (min-width: 960px) {
-	.single-card .col-9{
-		width: 88%;
-	}
-}
-@media only screen and (min-width: 1224px) {
-	.single-card .col-9{
-		width: 90%;
 	}
 }
 /*Card section end*/
