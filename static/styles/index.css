@@ -111,8 +111,8 @@ button:focus {
 	font-size: 14px;
 	font-weight: 500;
 	font-family: 'Roboto', sans-serif;
-	padding-top: 2%;
-	padding-bottom: 1%;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 .language-strip{
@@ -136,8 +136,8 @@ button:focus {
 	text-transform: capitalize;
 	font-weight: 900;
 	height: 40px;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-top: 40px;
+	padding-bottom: 20px;
 	
 }
 
@@ -150,7 +150,8 @@ button:focus {
 	color: #FFF;
 	text-align: center;
 	height: 80px;
-	padding-top: 2%;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 .footer-img{
@@ -224,16 +225,11 @@ button:focus {
 	}
 }
 @media only screen and (min-width: 400px) {
+	.single-card {
+		width: 380px;
+	}
 	.single-card .col-9{
 		width: 78%;
-	}
-}
-@media only screen and (min-width: 470px) {
-	.single-card {
-		width: 450px;
-	}
-	.single-card .col-9{
-		width: 80%;
 	}
 }
 /*Card section end*/
